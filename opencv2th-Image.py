@@ -2,12 +2,18 @@ import cv2
 import numpy as np
 import os
 
+a = np.random.randn(3,5)
+b = np.sum(a, axis = 0, keepdims = True)
+
+print(b.shape)
+'''
+
 img = cv2.imread('MyPic.png')
 my_roi = img[100:200, 100:200]
 img[300:400, 300:400] = my_roi
 cv2.imwrite('MyPic.jpg', img)
 print("Writing complete.")
-
+'''
 ''' ~?zellikleri yazd?rma 
 img = cv2.imread('MyPic.png')
 print(img.shape) #height, width ve renk kanallar?. Gri resimde len(shape) == 2, renkli resimde len(shape) == 3,
