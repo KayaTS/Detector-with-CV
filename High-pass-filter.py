@@ -22,6 +22,9 @@ k5 = ndimage.convolve(img, kernel_5x5)
 
 # LPF uygulama ve bu LPF ile orjinal fotoğrafın farkı sayesinde yeni bir HPF elde etme
 # LPF olarak meşhur gaus bulanıklaştırma-yumuşatma kullanılır.
+# Çıktıya dikkat edildiğinde en iyi sonucu bu bulanıklık filtresi üzerine uygulanan HPF verdiği görülür
+# bunun sebebi filtrelerin gürültüyü kenar algılama problemine karşılık bulanıklaştırmanın büyük fayda sağlamasıdır.
+
 blurred = cv2.GaussianBlur(img, (17,17), 0)
 g_hpf = img - blurred
 
