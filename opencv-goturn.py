@@ -5,7 +5,7 @@ import cv2
 tracker = cv2.TrackerGOTURN_create()
 
 # Read video
-video = cv2.VideoCapture("bir.mp4")
+video = cv2.VideoCapture("media/bir.mp4")
 
 # Exit if video not opened
 if not video.isOpened():
@@ -19,9 +19,9 @@ if not ok:
     sys.exit()
 
 # Define a bounding box
-bbox = (100, 100, 100, 100)
+bbox = (100, 100, 200, 200)
 # Uncomment the line below to select a different bounding box
-bbox = cv2.selectROI(frame, False)
+#bbox = cv2.selectROI(frame, False)
 
 
 # Initialize tracker with first frame and bounding box
