@@ -1,1 +1,1 @@
-Learning OpenCV4 Computer Vision With Python 3 book's examples 
+ Drone detection with OpenCV 4
